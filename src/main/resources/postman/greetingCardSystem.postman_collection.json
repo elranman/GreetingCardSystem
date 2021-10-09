@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "7e737ea4-9848-44aa-9493-8cf04a996c36",
+		"name": "greetingCardSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/greetingCard/catalog",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/greetingCard/catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"greetingCard",
+						"catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/greetingCard/cards_success_MAZAL-TOV_TEXT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"basedOnTemplateName\":\"MAZAL TOV\",\n\"parameters\":[\"Elran\",\"Manor\"],\n\"fileFormat\":\"TEXT\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/greetingCard/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"greetingCard",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/greetingCard/cards_success_NEW_BIRTH_CSV",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"basedOnTemplateName\":\"NEW BIRTH\",\n\"parameters\":[\"Girl\",\"Manor\",\"Family\"],\n\"fileFormat\":\"CSV\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/greetingCard/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"greetingCard",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/greetingCard/cards_failure_NEW_BIRTH_JPEG_NOT_EXIST_FORMAT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"basedOnTemplateName\":\"NEW BIRTH\",\n\"parameters\":[\"Girl\",\"Manor\",\"Family\"],\n\"fileFormat\":\"JPEG\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/greetingCard/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"greetingCard",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/greetingCard/cards_success_upload_card_using_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/yanirmanor/Documents/act.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/greetingCard/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"greetingCard",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

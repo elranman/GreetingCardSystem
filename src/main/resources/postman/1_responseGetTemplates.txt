@@ -1,0 +1,1 @@
+{MAZAL TOV=CardTemplate{templateId=11111111, templateContent='MAZAL TOV %s %s , It's your Birthday today', templateType='MAZAL TOV'}, NEW BIRTH=CardTemplate{templateId=222222222, templateContent='CONGRATOLATION for your new baby %s. we wishing you all the best. Sincerely %s %s ', templateType='NEW BIRTH'}}
